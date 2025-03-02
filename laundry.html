@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dry Cleaning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .product-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            width: 100%;
+            height: auto;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #003399;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function getProductName() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('product') || 'Unknown Product';
+        }
+        
+        window.onload = function() {
+            document.getElementById('Dry cleaning').innerText = getProductName();
+        };
+    </script>
+</head>
+<body>
+    <div class="product-container">
+        <h1 id="Dry Cleaning"></h1>
+        <img src="laundry.png" alt="Dry cleaning" class="product-image">
+        <p> <h1>Laundry Services</h1>
+            <p>✨ <strong>Fresh. Clean. Hassle-Free.</strong> Say goodbye to the hassle of washing clothes! At <strong>Cleanomatics</strong>, we use advanced fabric care technology to ensure your clothes get the perfect wash, every time.</p>
+            <p>🔥 <strong>Why Choose Us?</strong></p>
+            <ul>
+                <li>✔️ 24-hour doorstep pickup & delivery</li>
+                <li>✔️ Gentle on fabric, tough on stains</li>
+                <li>✔️ Affordable & time-saving</li>
+            </ul>
+            <p>🚀 <strong>Get your laundry done with a tap!</strong></p></p>
+        <button class="back-button" onclick="window.history.back()">Go Back</button>
+    </div>
+</body>
+</html>

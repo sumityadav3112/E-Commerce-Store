@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dry Cleaning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .product-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            width: 100%;
+            height: auto;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #003399;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function getProductName() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('product') || 'Unknown Product';
+        }
+        
+        window.onload = function() {
+            document.getElementById('Dry cleaning').innerText = getProductName();
+        };
+    </script>
+</head>
+<body>
+    <div class="product-container">
+        <h1 id="Dry Cleaning"></h1>
+        <img src="home_cleaning.png" alt="Dry cleaning" class="product-image">
+        <h1>Home Cleaning Services</h1>
+        <p>🧼 <strong>A Spotless Home, Effortlessly!</strong></p>
+        <p>Let <strong>Cleanomatics</strong> take care of your home while you relax! We offer <strong>deep cleaning & sanitization</strong> for every nook and corner, making your home <strong>germ-free and sparkling clean</strong>.</p>
+        <p>🛠 <strong>Our Services:</strong></p>
+        <ul>
+            <li>✔️ Full Home Deep Cleaning – Kitchens, Bathrooms, & Living Areas</li>
+            <li>✔️ Sanitization & Disinfection – 99.9% germ removal</li>
+            <li>✔️ Affordable & Quick Service</li>
+        </ul>
+        <p>🏡 <strong>Book today and enjoy a clean, healthy home!</strong></p>        <button class="back-button" onclick="window.history.back()">Go Back</button>
+    </div>
+</body>
+</html>

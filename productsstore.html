@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dry Cleaning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .product-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            width: 100%;
+            height: auto;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #003399;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function getProductName() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('product') || 'Unknown Product';
+        }
+        
+        window.onload = function() {
+            document.getElementById('Dry cleaning').innerText = getProductName();
+        };
+    </script>
+</head>
+<body>
+    <div class="product-container">
+        <h1 id="Dry Cleaning"></h1>
+        <img src="products.png" alt="Dry cleaning" class="product-image">
+        <h1>Cleanomatics Product Store</h1>
+        <p>🛍 <strong>Your One-Stop Shop for Premium Cleaning Essentials!</strong></p>
+        <p>Explore our exclusive range of <strong>eco-friendly & powerful cleaning products</strong>. From <strong>stain removers</strong> to <strong>fabric conditioners</strong>, we have everything you need to keep your clothes and home <strong>fresh & spotless</strong>.</p>
+        <p>🛍 <strong>Shop Now & Enjoy Special Discounts!</strong></p>        <button class="back-button" onclick="window.history.back()">Go Back</button>
+    </div>
+</body>
+</html>

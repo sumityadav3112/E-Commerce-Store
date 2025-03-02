@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dry Cleaning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .product-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            width: 100%;
+            height: auto;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #003399;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function getProductName() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('product') || 'Unknown Product';
+        }
+        
+        window.onload = function() {
+            document.getElementById('Dry cleaning').innerText = getProductName();
+        };
+    </script>
+</head>
+<body>
+    <div class="product-container">
+        <h1 id="Dry Cleaning"></h1>
+        <img src="upholstery.png" alt="Dry cleaning" class="product-image">
+        <h1>Upholstery Cleaning</h1>
+        <p>🏠 <strong>Breathe Fresh, Live Fresh!</strong></p>
+        <p>Dust, germs, and stains ruin the beauty of your <strong>sofas, cushions, and mattresses</strong>. At <strong>Cleanomatics</strong>, we <strong>deep clean & sanitize</strong> your upholstery, making your home fresh and allergen-free.</p>
+        <p>💡 <strong>What We Offer:</strong></p>
+        <ul>
+            <li>✔️ Deep Steam Cleaning for sofas, carpets & mattresses</li>
+            <li>✔️ Stain & Odor Removal</li>
+            <li>✔️ Safe & Eco-Friendly Solutions</li>
+        </ul>
+        <p>✨ <strong>Book a cleaning today & revamp your living space!</strong></p>        <button class="back-button" onclick="window.history.back()">Go Back</button>
+    </div>
+</body>
+</html>

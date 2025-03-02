@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dry Cleaning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .product-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            width: 100%;
+            height: auto;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #003399;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function getProductName() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('product') || 'Unknown Product';
+        }
+        
+        window.onload = function() {
+            document.getElementById('Dry cleaning').innerText = getProductName();
+        };
+    </script>
+</head>
+<body>
+    <div class="product-container">
+        <h1 id="Dry Cleaning"></h1>
+        <img src="dryclean.png" alt="Dry cleaning" class="product-image">
+        <p> <h1>Premium Dry Cleaning</h1>
+            <p>💎 <strong>Luxury Care for Your Premium Wear</strong></p>
+            <p>Your <strong>suits, dresses, and delicate fabrics</strong> deserve the best! <strong>Cleanomatics</strong> specializes in professional <strong>dry cleaning</strong> that maintains fabric integrity while eliminating <strong>tough stains & odors</strong>.</p>
+            <p>🛡 <strong>Your Wardrobe's Best Friend</strong></p>
+            <ul>
+                <li>✔️ No Shrinkage or Damage – Safe chemical cleaning</li>
+                <li>✔️ Expert Care for Wool, Silk, and Designer Wear</li>
+                <li>✔️ 100% Stain Removal Guarantee</li>
+            </ul>
+            <p>📢 <strong>Avail FLAT 20% Off – Use Code: <span style="color:red;">FLAT20P</span></strong></p>
+        </p>
+        <button class="back-button" onclick="window.history.back()">Go Back</button>
+    </div>
+</body>
+</html>
